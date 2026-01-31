@@ -1,0 +1,2 @@
+#1. Создаем бэкенд laravel проект
+    composer create-project --prefer-dist laravel/laravel backend
