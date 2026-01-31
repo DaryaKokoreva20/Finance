@@ -18,3 +18,11 @@
 
 #5. Создаем модель для расходов
     php artisan make:model Expense
+
+#6. Установить Vue CLI
+    npm install -g @vue/cli
+
+#7. Создаем фронт vue проект
+    vue create frontend
+
+#8. 
