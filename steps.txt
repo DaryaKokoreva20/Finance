@@ -1,2 +1,20 @@
 #1. Создаем бэкенд laravel проект
     composer create-project --prefer-dist laravel/laravel backend
+
+#2. Создаем postgres бд finance_db
+    psql -U postgres
+    CREATE DATABASE finance_db;
+
+#3. Настраиваем .env
+    DB_CONNECTION=pgsql
+    DB_HOST=127.0.0.1
+    DB_PORT=5432
+    DB_DATABASE=finance_db
+    DB_USERNAME=postgres
+    DB_PASSWORD=password
+
+#4. Создаем миграцию и в ней создаем таблицу расходов 
+    php artisan make:migration create_expenses_table
+
+#5. Создаем модель для расходов
+    php artisan make:model Expense
