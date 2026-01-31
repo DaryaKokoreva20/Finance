@@ -1,12 +1,12 @@
 <template>
   <footer class="footer">
-    <div class="footer-content">
+    <div class="footer-container">
       <div class="footer-left">
         <p>&copy; 2026 Finance Tracker. All Rights Reserved.</p>
       </div>
       <div class="footer-center">
         <ul class="social-links">
-          <h4>Be happy and rich</h4>
+          <p>BE HAPPY AND RICH</p>
         </ul>
       </div>
       <div class="footer-right">
@@ -16,6 +16,12 @@
   </footer>
 </template>
 
+<script>
+export default {
+  name: 'AppFooter',
+};
+</script>
+
 <style scoped>
 .footer {
   background-color: #2d3436;
@@ -23,20 +29,25 @@
   padding: 20px 0;
   text-align: center;
   font-size: 14px;
-  margin-top: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.footer-content {
+.footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .footer-left, .footer-right {
   flex: 1;
+  font-size: 1rem;
 }
 
 .footer-center {
@@ -69,5 +80,23 @@
 
 .footer-right a:hover {
   text-decoration: underline;
+}
+
+/* Адаптивность: футер для мобильных устройств (расположение в строку) */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .footer-left, .footer-center, .footer-right {
+    flex: 1;
+    text-align: center;
+  }
+
+  .footer-center {
+    margin-top: 0;
+  }
 }
 </style>
